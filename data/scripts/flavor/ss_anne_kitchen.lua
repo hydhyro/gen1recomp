@@ -27,13 +27,13 @@ return {
           local dish
           if roll <= 2 then
             -- bit 7 of hRandomAdd set (~50%)
-            dish = "Salmon du Salad!\fLes guests may\ngripe it's fish\vagain, however!"
+            dish = t._SSAnneKitchenCook7SalmonDuSaladText or "Salmon du Salad!\fLes guests may\ngripe it's fish\vagain, however!"
           elseif roll == 3 then
             -- bit 4 set, bit 7 clear (~25%)
-            dish = "Eels au Barbecue!\fLes guests will\nmutiny, I fear."
+            dish = t._SSAnneKitchenCook7EelsAuBarbecueText or "Eels au Barbecue!\fLes guests will\nmutiny, I fear."
           else
             -- neither bit set (~25%)
-            dish = "Prime Beef Steak!\fBut, have I enough\nfillets du beef?"
+            dish = t._SSAnneKitchenCook7PrimeBeefSteakText or "Prime Beef Steak!\fBut, have I enough\nfillets du beef?"
           end
           push(game, dish, done)
         end)
