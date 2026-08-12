@@ -476,7 +476,7 @@ function ItemEffects.use(data, save, itemId, target, battle, moveIndex, ow)
     -- Spanish ROM puts the stat before the name), so the extracted line
     -- cannot be filled positionally; the engine wording stands
     return "consumed", { Strings("%s's %s\nrose!", monName(data, target),
-      vitaminStat == "hp" and "HP" or vitaminStat:upper()) }
+      vitaminStat == "hp" and Strings("HP") or Strings(vitaminStat:upper())) }
   end
 
   -- PP UP boosts the move the player picked (ItemUsePPUp's move menu)
