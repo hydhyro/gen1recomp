@@ -161,7 +161,7 @@ function EvolutionState:draw()
   love.graphics.setColor(0, 0, 0, 1)
   if not self.done then
     Font.draw(Strings("What?"), 8, 104)
-    Font.draw(self.oldName .. " is", 8, 114)
+    Font.draw(self.oldName .. Strings(" is"), 8, 114)
     Font.draw(Strings("evolving!"), 8, 124)
   end
   love.graphics.setColor(1, 1, 1, 1)
