@@ -277,7 +277,7 @@ function ItemEffects.use(data, save, itemId, target, battle, moveIndex, ow)
           "Nothing happened!") }
       end
       b.stages[stat] = cur + 1
-      return "consumed", { Strings("%s's\n%s rose!", b.name, stat:upper()) }
+      return "consumed", { Strings("%s's\n%s rose!", b.name, Strings(stat:upper())) }
     end
     -- ItemUseDireHit/ItemUseGuardSpec always set the bit and consume
     -- the item, even when it is already active
