@@ -139,9 +139,9 @@ function TrainerCard:draw()
   end
   love.graphics.setColor(0, 0, 0, 1)
   Font.draw(Strings("NAME/%s", save.player.name or "RED"), 16, 16)
-  Font.draw(("MONEY/¥%d"):format(save.money or 0), 16, 32)
+  Font.draw(Strings("MONEY/¥%d"):format(save.money or 0), 16, 32)
   local t = math.floor(save.playTime or 0)
-  Font.draw(("TIME/%3d:%02d"):format(math.floor(t / 3600),
+  Font.draw(Strings("TIME/%3d:%02d"):format(math.floor(t / 3600),
                                      math.floor(t / 60) % 60), 16, 48)
 
   -- the circle-dotted BADGES banner (TrainerInfo_BadgesText)
